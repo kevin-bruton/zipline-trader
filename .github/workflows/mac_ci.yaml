@@ -49,6 +49,9 @@ jobs:
     - name: Print python matrix.python-version
       run: |
         echo ${{ matrix.python-version }}
+    - name: Print conda info
+      run: |
+        conda info
     - name: Install scientific python requirements
       env:
         DISABLE_BCOLZ_AVX2: true
