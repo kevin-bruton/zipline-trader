@@ -46,6 +46,9 @@ jobs:
         key: ${{ runner.os }}-pip-py${{matrix.python-version}}-${{ hashFiles(env.PIP_CONSTRAINT) }}
         restore-keys: |
           ${{ runner.os }}-pip-py${{matrix.python-version}}-
+    - name: Print python matrix.python-version
+      run: |
+        echo ${{ matrix.python-version }}
     - name: Install scientific python requirements
       env:
         DISABLE_BCOLZ_AVX2: true
