@@ -7,6 +7,7 @@ on:
   pull_request:
     branches:
       - master
+  workflow_dispatch:
 
 jobs:
   build-and-test:
@@ -48,7 +49,7 @@ jobs:
       env:
         DISABLE_BCOLZ_AVX2: true
       run: |
-        conda install -c conda-forge pandas=0.22.0 numpy=1.18.4 scipy=1.4.1 cython=0.25.2 bcolz=1.2.1
+        conda install -c conda-forge pandas=0.22.0 numpy=1.19.4 scipy=1.4.1 cython=0.25.2 bcolz=1.2.1
     - name: Install requirements
       run: |
         pip install -e .[dev]
