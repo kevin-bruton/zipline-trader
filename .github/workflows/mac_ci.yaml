@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - master
+      - mac_ci
   pull_request:
     branches:
       - master
