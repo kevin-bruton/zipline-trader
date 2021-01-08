@@ -60,6 +60,3 @@ jobs:
     - name: Install requirements
       run: |
         pip install -e .[dev]
-    - name: Run tests
-      run: |
-        nosetests tests
