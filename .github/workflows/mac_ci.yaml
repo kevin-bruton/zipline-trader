@@ -28,15 +28,6 @@ jobs:
       with:
         update-conda: true
         python-version: ${{ matrix.python-version }}
-    - name: Conda info
-      shell: bash
-      run: conda info
-    - name: Print python matrix.python-version
-      run: |
-        echo ${{ matrix.python-version }}
-    - name: Print conda info
-      run: |
-        conda info
     - name: Install TA lib (macOS)
       if: startsWith(matrix.os, 'macos')
       run: |
